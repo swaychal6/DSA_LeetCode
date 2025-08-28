@@ -1,4 +1,4 @@
-package test;
+package MultiThreading;
 
 class SharedData {
     private int data;

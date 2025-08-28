@@ -1,6 +1,8 @@
 package test;
 
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Optional;
 
 public class CodeTest {
     public static void main(String[] args) {
@@ -12,8 +14,8 @@ public class CodeTest {
         sort(arr);
         sort(arr2);
 
-
-        System.out.println(Arrays.toString(arr2));
+        Integer first = Arrays.stream(arr).boxed().distinct().sorted(Comparator.reverseOrder()).skip(1).findFirst().get();
+        System.out.println(first);
 
 
     }

@@ -2,7 +2,7 @@ package test;
 
 import java.util.*;
 
-public class Main {
+public class Main implements  Sample{
     public static void main(String[] args) {
         Map<String, String> empToManager = new HashMap<>();
         empToManager.put("Ajay", "Ramesh");
@@ -21,5 +21,13 @@ public class Main {
         }
 
         System.out.println(String.join("->", l1));
+    }
+
+    /**
+     *
+     */
+    @Override
+    public void gettingData() {
+
     }
 }

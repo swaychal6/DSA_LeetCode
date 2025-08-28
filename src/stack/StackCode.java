@@ -1,11 +1,11 @@
-package test;
+package stack;
 
 import java.util.*;
 
 public class StackCode {
     public static void main(String[] args) {
 
-        String str = "(((())))";
+        String str = "(((()(()))))";
         String str2="{}{}[]";
         System.out.println(isValid(str));
         System.out.println(isValid2(str2));
