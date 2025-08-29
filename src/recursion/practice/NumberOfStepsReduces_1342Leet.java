@@ -1,4 +1,4 @@
-package recursion;
+package recursion.practice;
 
 public class NumberOfStepsReduces_1342Leet {
     public static void main(String[] args) {

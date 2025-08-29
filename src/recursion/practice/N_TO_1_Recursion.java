@@ -1,4 +1,4 @@
-package recursion;
+package recursion.practice;
 
 public class N_TO_1_Recursion {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package recursion;
+package recursion.practice;
 
 public class ONE_TO_N {
     public static void main(String[] args) {
