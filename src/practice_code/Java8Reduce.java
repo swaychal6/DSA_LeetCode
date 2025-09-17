@@ -14,7 +14,7 @@ public class Java8Reduce {
 
 
         String reduce = s.chars().mapToObj(value -> String.valueOf((char)value) )
-                .reduce((s1, s2) -> s2+s1).get();
+                .reduce("",(s1, s2) -> s2+s1).toString();
 
         System.out.println(reduce);
 
