@@ -19,15 +19,10 @@ public class RepeatedElement {
         int arr[]={1,2,3,4,5,3,4,5};
 
 
-        Map.Entry<Integer, Long> integerLongEntry = Arrays.stream(arr)
-                .boxed().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
-                .entrySet().stream()
-                .sorted(Map.Entry.<Integer,Long>comparingByValue().reversed())
-                .findFirst()
-                .get();
+        Map<Integer, Long> collect = Arrays.stream(arr)
+                .boxed().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
-
-        System.out.println(integerLongEntry);
+        System.out.println(collect);
 
         System.out.println(" first repetative elemnt is : "+repetativeElement(arr));;
     }
