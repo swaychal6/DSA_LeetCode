@@ -15,5 +15,53 @@ public class MapSortByValue {
 
 
         System.out.println(collect);
+        int arr[]={5,4,3,2,1};
+        mergeSort(arr,0,arr.length);
+        System.out.println(Arrays.toString(arr));
+    }
+
+    private static void mergeSort(int arr[],int start,int end){
+
+        if(end-start==1){
+            return ;
+        }
+
+        if (start<end){
+            int mid=start+(end-start)/2;
+
+            mergeSort(arr,start,mid);
+            mergeSort(arr,mid,end);
+
+            merging(arr,start,mid,end);
+        }
+    }
+
+    private static void merging(int arr[],int start,int mid,int end){
+        int mix[]=new int[end-start];
+        int i=start;
+        int j=mid;
+        int k=0;
+
+        while(i<mid && j<end){
+
+            if(arr[i]<arr[j]){
+                mix[k++]=arr[i++];
+            }else{
+                mix[k++]=arr[j++];
+            }
+        }
+
+        while(i<mid){
+            mix[k++]=arr[i++];
+        }
+
+        while(j<end){
+            mix[k++]=arr[j++];
+        }
+
+        for (int l = 0,m=start; l <arr.length && m<end ; l++,m++) {
+            arr[m]=mix[l];
+        }
+
     }
 }
